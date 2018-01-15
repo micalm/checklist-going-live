@@ -1,30 +1,30 @@
 # A checklist for all projects that are going live
 
-This checklist is used whenever a project is going live at https://spatie.be
-
-## 1. Browserstack tests
-- [ ] Desktop: test on latest versions of Chrome, IE/Edge, Firefox, Safari
-- [ ] Mobile: test on latest versions of Mobile Safari, Android
+## 1. Browser tests
+- [ ] Desktop: test on latest versions of:
+    - [ ] Chrome
+    - [ ] IE/Edge
+    - [ ] Firefox
+    - [ ] Safari
+- [ ] Mobile: test on latest versions of:
+    - [ ] Mobile Safari
+    - [ ] Android
 
 ## 2. Front end checklist
 
 ### Assets
-- [ ] Search sources for `http://`. Replace by `https://`
+- [ ] Search sources for `http://`. Replace with `https://`
 - [ ] Lint (s)css sources
-- [ ] Webfonts: is the live domain configured in services like Typekit, Fonts.com etc.?
 - [ ] Is the browserlist properly configured for autoprefixer and babel-preset-env?
-- [ ] When using PurgeCSS: check if layout is preserved.
 
 ### Scripts
-- [ ] Only jQuery v3 may be used. All references to jQuery 2 must be removed `npm ls jquery`
-- [ ] Is `yarn.lock` present?
 - [ ] Check JS lint errors. Remove all `console.log` lines in scripts
 - [ ] Check for console errors
 
 ### Page weight
 - [ ] Evaluate total weight of at least homepage
-- [ ] Open Inspector network/timeline tab to identify heavy assets 
-- [ ] Check if heavy assets are cached 
+- [ ] Open Inspector network/timeline tab to identify heavy assets
+- [ ] Check if heavy assets are cached
 
 ### Performance
 - [ ] Use the Chrome DevTools and throttle your CPU and network with 10x CPU slowdown and set the network to "Good 3G".
@@ -40,8 +40,6 @@ This checklist is used whenever a project is going live at https://spatie.be
 - [ ] Test Facebook sharing. Provide og-tags if needed
 - [ ] Does Favicon load? Pin the tab in Safari to check pinned icon
 
-_Repeat this section for all languages_
-
 ### Components
 - [ ] Google Maps
     - [ ] API key needed/configured?
@@ -55,8 +53,7 @@ _Repeat this section for all languages_
 - [ ] Check structured data for news, events, products,... https://search.google.com/structured-data/testing-tool/
 
 ## 4. Back end checklist
-- [ ] Open up `/blender`
-- [ ] Remove unused modules from main menu 
+- [ ] Remove unused modules from main menu
 - [ ] Configure Analytics dashboard
 - [ ] Create a new admin and try to log in
 - [ ] Try the password reset flow for existing user
@@ -81,21 +78,15 @@ _Repeat this section for all languages_
 
 ### Google Search Console
 - [ ] Submit all www/non-www http/https variations
-- [ ] Set up non-www https as the preferred domain 
+- [ ] Set up non-www https as the preferred domain
 - [ ] Crawl > Fetch as Google > Submit to index to kickstart index
 
 ### Server
-- [ ] Are DigitalOcean backups enabled?
-- [ ] Are Amazon backups enabled?
+- [ ] Are file backups enabled?
+- [ ] Are database backups enabled?
 - [ ] Is the output of artisan task `backup:run` ok?
-- [ ] Is artisan scheduled on Forge?
-- [ ] Is Horizon configured in Supervisor on Forge? Command should be `php artisan horizon`. Path should be `/home/forge/my-new-site.com/current`
-- [ ] Are the queues set up on Forge? ('default' and 'media_queue')? Do they have a low max return limit?
-- [ ] Is the url being monitored by our uptime-monitor?
-- [ ] Is the server being monitored by our server-monitor?
+- [ ] Is the url being monitored by uptime-monitor?
+- [ ] Is the server being monitored by server-monitor?
 
 ### Github
-- [ ] Remove `develop` branch or other stale branches 
-
-## About Spatie
-Spatie is a webdesign agency based in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
+- [ ] Remove `develop` branch or other stale branches
