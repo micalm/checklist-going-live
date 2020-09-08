@@ -19,6 +19,7 @@
 
 ### Scripts
 - [ ] Check JS lint errors. Remove all `console.log` lines in scripts
+- [ ] Check for @todo, @fixme and other comment annotations
 - [ ] Check for console errors
 
 ### Page weight
@@ -28,6 +29,7 @@
 
 ### Performance
 - [ ] Use the Chrome DevTools and throttle your CPU and network with 10x CPU slowdown and set the network to "Good 3G".
+- [ ] Use Lighthouse-Metrics to check how the site behaves if not accessed from the best-case-location
 
 ## 3. Check content (with an open console)
 - [ ] Are all strings / images present (and translated)?
